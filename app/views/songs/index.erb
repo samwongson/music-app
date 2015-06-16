@@ -1,0 +1,10 @@
+<% @songs.each do |song| %>
+  <div class="song">
+    <h3><a href="<%= song.url %>"><%= song.title %><small> (by: <%= song.artist %>)</small></a></h3>
+    <p>
+      Created at:<%= song.created_at %> Updated at:<%= song.updated_at %>
+    </p>
+  </div>
+<% end %>
+
+<a class="btn btn-primary" href="/songs/new">Post a song... It's FREE (for now)!</a>
